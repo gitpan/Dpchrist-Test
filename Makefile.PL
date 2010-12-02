@@ -1,5 +1,5 @@
 #######################################################################
-# $Id: Makefile.PL,v 1.6 2010-12-01 07:06:31 dpchrist Exp $
+# $Id: Makefile.PL,v 1.7 2010-12-02 21:33:34 dpchrist Exp $
 #
 # Copyright 2010 by David Paul Christensen dpchrist@holgerdanske.com
 #
@@ -27,6 +27,8 @@ warn $@ if $@;
 
 eval {
     require Dpchrist::ExtUtils::MakeMaker;
+    die 'Requires Dpchrist::ExtUtils::MakeMaker 1.013 or higher'
+	unless 1.013 <= $Dpchrist::ExtUtils::MakeMaker::VERSION;
     import  Dpchrist::ExtUtils::MakeMaker (
 	postamble => sub {
 	    my ($o, $prev) = @_;
@@ -45,7 +47,14 @@ warn $@ if $@;
 WriteMakefile(
     NAME		=> 'Dpchrist::Test',
     VERSION_FROM	=> 'lib/Dpchrist/Test.pm',
-    PREREQ_PM		=> {},
+    PREREQ_PM		=> {
+	Dpchrist::ExtUtils::MakeMaker	=> 1.013,
+	Test::Compile                   => 0,
+	Test::Manifest                  => 0,
+	Test::More                      => 0,
+	Test::Pod                       => 0,
+	Test::Prereq                    => 0,
+    },
     ABSTRACT_FROM	=> 'lib/Dpchrist/Test.pm',
     AUTHOR		=>
 	    'David Paul Christensen dpchrist@holgerdanske.com',
