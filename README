@@ -5,7 +5,7 @@ SYNOPSIS
         $ cp -i Dpchrist-Test/t/*.t MyModule/t/.
 
 DESCRIPTION
-    This documentation describes module revision $Revision: 1.7 $.
+    This documentation describes module revision $Revision: 1.8 $.
 
     This is alpha test level software and may change or disappear at any
     time.
@@ -26,7 +26,7 @@ DESCRIPTION
     Calls Test::Prereq::prereq_ok();
 
   EXPORT
-    Nothing to export.
+    None.
 
 INSTALLATION
     Old school:

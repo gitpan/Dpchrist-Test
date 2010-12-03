@@ -1,5 +1,5 @@
 #######################################################################
-# $Id: Makefile.PL,v 1.7 2010-12-02 21:33:34 dpchrist Exp $
+# $Id: Makefile.PL,v 1.8 2010-12-03 05:13:51 dpchrist Exp $
 #
 # Copyright 2010 by David Paul Christensen dpchrist@holgerdanske.com
 #
@@ -48,7 +48,8 @@ WriteMakefile(
     NAME		=> 'Dpchrist::Test',
     VERSION_FROM	=> 'lib/Dpchrist/Test.pm',
     PREREQ_PM		=> {
-	Dpchrist::ExtUtils::MakeMaker	=> 1.013,
+	Dpchrist::ExtUtils::MakeMaker	=> 1.015,
+	ExtUtils::MakeMaker		=> 0,
 	Test::Compile                   => 0,
 	Test::Manifest                  => 0,
 	Test::More                      => 0,
@@ -60,6 +61,9 @@ WriteMakefile(
 	    'David Paul Christensen dpchrist@holgerdanske.com',
     clean		=> {
 	FILES => q( *~tmp */*~tmp *.tar debug.log ),
+    },
+    realclean		=> {
+	FILES => q( README *.html *.tar.gz ),
     },
 );
 
