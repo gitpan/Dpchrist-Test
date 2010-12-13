@@ -1,5 +1,5 @@
 #######################################################################
-# $Id: Test.pm,v 1.8 2010-12-03 05:13:51 dpchrist Exp $
+# $Id: Test.pm,v 1.9 2010-12-10 05:56:07 dpchrist Exp $
 #######################################################################
 # package:
 #----------------------------------------------------------------------
@@ -9,7 +9,7 @@ package Dpchrist::Test;
 use strict;
 use warnings;
 
-our $VERSION  = sprintf "%d.%03d", q$Revision: 1.8 $ =~ /(\d+)/g;
+our $VERSION  = sprintf "%d.%03d", q$Revision: 1.9 $ =~ /(\d+)/g;
 
 1;
 
@@ -29,7 +29,7 @@ Dpchrist::Test - Perl module test utilities
 
 =head1 DESCRIPTION
 
-This documentation describes module revision $Revision: 1.8 $.
+This documentation describes module revision $Revision: 1.9 $.
 
 
 This is alpha test level software
