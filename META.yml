@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Dpchrist-Test
-version:            1.009
+version:            1.010
 abstract:           Perl module test utilities
 author:
     - David Paul Christensen dpchrist@holgerdanske.com
